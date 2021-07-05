@@ -47,13 +47,29 @@ with open(csvpath) as csvfile:
         winner_name = "O'Tooley"
 
 print(f"Election Results")
-print(f"------------------------------")
+print(f"-------------------------")
 print(f"Total Votes: {total}")
-print(f"------------------------------")
-print(f"Khan: {khan_percent} ({khan})")
-print(f"Correy: {correy_percent} ({correy})")
-print(f"Khan: {li_percent} ({li})")
-print(f"Khan: {otooley_percent} ({otooley})")
-print(f"------------------------------")
+print(f"-------------------------")
+print(f"Khan: {khan_percent:.3%} ({khan})")
+print(f"Correy: {correy_percent:.3%} ({correy})")
+print(f"Li: {li_percent:.3%} ({li})")
+print(f"O'Tooley: {otooley_percent:.3%} ({otooley})")
+print(f"-------------------------")
 print(f"Winner: {winner_name}")
-print(f"------------------------------")
+print(f"-------------------------")
+
+results = os.path.join("..", "PyPoll", "Analysis", "results.txt")
+
+with open(results, 'w',) as txtfile:
+
+    txtfile.write(f"Election Results")
+    txtfile.write(f"-------------------------")
+    txtfile.write(f"Total Votes: {total}")
+    txtfile.write(f"-------------------------")
+    txtfile.write(f"Khan: {khan_percent:.3%} ({khan})")
+    txtfile.write(f"Correy: {correy_percent:.3%} ({correy})")
+    txtfile.write(f"Li: {li_percent:.3%} ({li})")
+    txtfile.write(f"O'Tooley: {otooley_percent:.3%} ({otooley})")
+    txtfile.write(f"-------------------------")
+    txtfile.write(f"Winner: {winner_name}")
+    txtfile.write(f"-------------------------")
