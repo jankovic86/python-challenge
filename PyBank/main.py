@@ -20,9 +20,6 @@ with open(csvpath) as csvfile:
 
     months += 1
     previous_row = int(row[1])
-    total += int(row[1])
-    increase = int(row[1])
-    increase_month = row[0]
 
     for row in csvreader:
         months += 1
