@@ -50,3 +50,8 @@
   - The winner of the election based on popular vote.
 
  - In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+
+
+**Results**
+
+- The script and text files have been saved in two seperate folders named PyBank and PyPoll. Within each folder there will be the python script file (main.py) and a seperate folder named Analysis that will contain the results of the scripts as text files.
